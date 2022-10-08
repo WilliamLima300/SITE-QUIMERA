@@ -1,0 +1,786 @@
+*::-webkit-scrollbar {
+  width: 15px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #24242c;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #FFF;
+  border-radius: 20px;
+  border: 3px solid #24242c;
+}
+
+/*Definir fonte do site*/
+@font-face {
+  font-family: "Qanelas-Bold";
+  src: url("../fonts/Qanelas-Bold.otf") format("opentype"),
+    url("../fonts/Qanelas-Bold.ttf") format("truetype");
+  font-weight: Bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Qanelas-Regular";
+  src: url("../fonts/Qanelas-Regular.ttf") format("truetype"),
+    url("../fonts/Qanelas-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+/*Definir configurações do body*/
+body {
+  margin: 0;
+  padding: 0;
+  height: auto;
+
+
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+/*Definir estilo abaixo 600PX*/
+@media only screen and (max-width: 600px) {
+/*Definir estilo do header*/
+header {
+  width: 100%;
+  height: 475px;
+  display: flex;
+  justify-content: space-between;
+  background-image: url(../images/banner_400x475px.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/*Definir estilo do logo no header*/
+header img {
+  width: 30%;
+  margin: 12px;
+}
+/*Definir estilo do botão no header"orçamento"*/
+.btn {
+  cursor: pointer;
+  position: absolute;
+  top: 14px;
+  right: 10px;
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  font-family: "Qanelas-Bold", Helvetica;
+  font-size: 10px;
+  color: #FFF;
+  border-color: #2e2c2c;
+  background: #2e2c2c;
+  padding: 2px 5px 2px 2px;
+  text-decoration: none;
+}
+
+header .btn:hover {
+  opacity: 0.8;
+  background: #ffffff;
+  border-color: #ffffff;
+  text-decoration: none;
+  color: #2e2c2c;
+}
+  /*Definir estilo da area para "projetos"*/
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+section .bloco1 h1 {
+  font-family: "Qanelas-Bold", Helvetica;
+  text-align: center;
+  font-size: 30px;
+  margin: 20px 15px 15px 15px;
+  line-height: 25px;
+  font-weight: bold;
+  color:#2e2c2c;
+}
+section .bloco1 p {
+  margin: auto;
+  width: 72%;
+  font-family: "Qanelas-Regular", Helvetica;
+  text-align: justify;
+  font-size: 14px;
+  letter-spacing: -1px;
+}
+
+/* Configurações do Projetos*/
+
+.main-projeto{
+max-width: 100%;
+display: flex;
+align-content: center;
+flex-direction: column;
+flex-wrap: nowrap;
+align-items: center;
+margin: 0 auto;
+
+}
+
+
+.main-projeto article{
+opacity: 1;
+flex-basis: calc(25% - 30px);
+max-height: 190px;
+margin: 5px 0 5px 0;
+width:80%;
+display: flex;
+align-content: center;
+flex-direction: column;
+flex-wrap: nowrap;
+align-items: center;
+
+}
+
+
+.main-projeto article:hover{
+opacity: 0.80;
+
+}
+
+.main-projeto article img{
+width:100%;
+height:190px;
+
+align-items: center;
+margin: 5px 0 5px 0;
+transition: all 0.5s;
+cursor: pointer;
+}
+
+.main-projeto article img:hover{
+-webkit-filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5));
+filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5));
+}
+
+/* Slideshow container2 */
+.slideshow-Container2 {
+  max-width:100%;
+  position: relative;
+  margin:auto;
+}
+
+/* Make the images invisible by default */
+.Containers2 {
+  display: none;
+  margin-top:5px;
+  
+}
+/* Faint animation */
+.fade2 {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.4s;
+  animation-name: fade;
+  animation-duration: 1.4s;
+}
+
+@-webkit-keyframes fade2 {
+  from {opacity: .5}
+  to {opacity: 2}
+}
+
+@keyframes fade2 {
+  from {opacity: .5}
+  to {opacity: 2}
+}
+/*Definir estilo do rodape-formulario de contato*/
+
+footer{
+  width: 100%;
+  font-family: "Qanelas-Regular", Helvetica;
+  background-color: #24242c;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  
+}
+
+input::placeholder {
+  color: black;
+}
+/*Definir estilo dos botoes de rede social*/
+footer .social{
+width: 50%;
+display: flex;
+flex-direction: row;
+align-items: flex-end;
+flex-direction: column;
+align-content: center;
+align-items: center;
+margin: 0 auto;
+
+
+}
+
+footer .social p {
+font-family:"Qanelas-Regular", Helvetica;
+font-size: 18px;
+color:#FFF;
+
+}
+
+footer .s-m{
+position: relative;
+display: flex;
+align-items: center;
+
+
+}
+footer .s-m a{
+display: inline-flex;
+width: 30px;
+height: 30px;
+background: #24242c;
+color: #03c57d;
+margin: 0 3px;
+border-radius: 50%;
+align-items: center;
+justify-content: center;
+transition: 0.5s;
+font-size: 23px;
+text-decoration: none;
+}
+footer .s-m a:hover{
+background: #FFF;
+}
+footer .s-m a i{
+transition: 0.5s all;
+}
+footer .s-m a:hover > i {
+transform: scale(1.4) rotate(26deg);
+}  
+
+
+/*Definir tamanho da  barra no formulario de contato*/
+footer img{
+margin:40px 10px 40px 10px;
+}
+
+footer .main-contato{
+width: 80%;
+margin: 0 auto;
+
+
+}
+
+footer .main-contato section .container{
+width:100%;
+
+}
+
+}
+/*Definir estilo acima 600PX*/
+
+@media only screen and (min-width: 600px) {
+/*Definir estilo do header*/
+header {
+  width: 100%;
+  height: 700px;
+
+  background-image: url(../images/banner_920x750px.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/*Definir estilo do logo no header*/
+header img {
+  width: 25%;
+  margin: 12px;
+}
+
+/*Definir estilo do botão no header"orçamento"*/
+
+.btn {
+  cursor: pointer;
+  position: absolute;
+  top: 14px;
+  right: 10px;
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  font-family: "Qanelas-Bold", Helvetica;
+  font-size: 10px;
+  color: #FFF;
+  border-color: #2e2c2c;
+  background: #2e2c2c;
+  padding: 10px 15px;
+  text-decoration: none;
+}
+
+header .btn:hover {
+  opacity: 0.8;
+  background: #ffffff;
+  border-color: #ffffff;
+  text-decoration: none;
+  color: #2e2c2c;
+}
+/*Definir estilo da area para "projetos"*/
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+
+section .bloco1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+section .bloco1 h1 {
+  font-family: "Qanelas-Bold", Helvetica;
+  text-align: center;
+  font-size: 50px;
+  line-height: 40px;
+  margin: 40px 15px 15px 15px;
+  font-weight: bold;
+  color:2e2c2c;
+}
+section .bloco1 p {
+  width: 58%;
+  margin: auto;
+  font-family: "Qanelas-Regular", Helvetica;
+  text-align: justify;
+  font-size: 14px;
+}
+/*Definir estilo da area para "projetos"*/
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+
+section .bloco1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+section .bloco1 h1 {
+  margin: 60px 15px 15px 15px;
+  font-family: "Qanelas-Bold", Helvetica;
+  text-align: center;
+  font-size: 90px;
+  line-height: 70px;
+  font-weight: bold;
+  color:#2e2c2c;
+}
+section .bloco1 p {
+  width: 50%;
+  margin-top: 18px;
+  font-family: "Qanelas-Regular", Helvetica;
+  text-align: justify;
+  font-size: 22px;
+}
+
+
+/* Configurações do Projetos*/
+
+.main-projeto{
+max-width: calc(1020px - 10px);
+padding: 0 20px;
+display: flex;
+justify-content: space-between;
+flex-wrap: wrap;
+align-content: flex-end;
+}
+
+
+.main-projeto article{
+opacity: 1;
+flex-basis: calc(25% - 30px);
+max-height: 400px;
+margin: 5px 0 5px 0;
+
+
+}
+
+.main-projeto article:hover{
+opacity: 0.80;
+
+}
+
+.main-projeto article img{
+width:80%;
+height:375px;
+max-height: 400px;
+align-items: center;
+margin: 20px 0 20px 0;
+transition: all 0.5s;
+cursor: pointer;
+}
+
+.main-projeto article img:hover{
+-webkit-filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5));
+filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5));
+}
+/* Slideshow container2 */
+.slideshow-Container2 {
+  max-width:100%;
+  position: relative;
+  margin:auto;
+}
+
+/* Make the images invisible by default */
+.Containers2 {
+  display: none;
+  margin-top:10px;
+  
+}
+
+/* Faint animation */
+.fade2 {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.4s;
+  animation-name: fade;
+  animation-duration: 1.4s;
+}
+
+@-webkit-keyframes fade2 {
+  from {opacity: .5}
+  to {opacity: 2}
+}
+
+@keyframes fade2 {
+  from {opacity: .5}
+  to {opacity: 2}
+}
+/*Definir estilo do rodape-formulario de contato*/
+
+footer{
+  width: 100%;
+  font-family: "Qanelas-Regular", Helvetica;
+  background-color: #24242c;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  
+}
+
+input::placeholder {
+  color: black;
+}
+/*Definir estilo dos botoes de rede social*/
+footer .social{
+width: 50%;
+display: flex;
+flex-direction: row;
+align-items: flex-end;
+flex-direction: column;
+align-content: center;
+align-items: center;
+margin: 0 auto;
+
+
+}
+
+footer .social p{
+font-family:"Qanelas-Regular", Helvetica;
+font-size: 32px;
+color:#FFF;
+margin-left: 15px;
+}
+
+footer .s-m{
+position: relative;
+display: flex;
+align-items: center;
+
+
+}
+footer .s-m a{
+display: inline-flex;
+width: 50px;
+height: 50px;
+background: #24242c;
+color: #03c57d;
+margin: 0 3px;
+border-radius: 50%;
+align-items: center;
+justify-content: center;
+transition: 0.5s;
+font-size: 23px;
+text-decoration: none;
+}
+footer .s-m a:hover{
+background: #FFF;
+}
+footer .s-m a i{
+transition: 0.5s all;
+}
+footer .s-m a:hover > i {
+transform: scale(1.4) rotate(26deg);
+}  
+
+
+/*Definir tamanho da  barra no formulario de contato*/
+footer img{
+margin:40px 10px 40px 10px;
+}
+
+footer .main-contato{
+width: 40%;
+margin: 0 auto;
+
+
+}
+
+footer .main-contato section .container{
+width:100%;
+
+}
+
+
+}
+
+/*Definir estilo acima 1024PX*/
+
+@media only screen and (min-width: 1280px) {
+/*Definir estilo do header*/
+header {
+  width: 100%;
+  height: 900px;
+  background-image: url(../images/banner_1500x766px.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/*Definir estilo do logo no header*/
+header img {
+  width: 20%;
+  max-width: 300px;
+  margin: 32px;
+}
+
+/*Definir estilo do botão no header"orçamento"*/
+.btn {
+  cursor: pointer;
+  position: absolute;
+  top: 40px;
+  right: 25px;
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  font-size: 20px;
+  font-family: "Qanelas-Bold", Helvetica;
+  color: #FFF;
+  border-color: #2e2c2c;
+  background: #2e2c2c;
+  padding: 10px 15p;
+  text-decoration: none;
+}
+
+.btn:hover {
+  opacity: 0.8;
+  background: #ffffff;
+  border-color: #ffffff;
+  text-decoration: none;
+  color: #2e2c2c;
+}
+
+/*Definir estilo da area para "projetos"*/
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+
+section .bloco1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+section .bloco1 h1 {
+  margin: 60px 15px 15px 15px;
+  font-family: "Qanelas-Bold", Helvetica;
+  text-align: center;
+  font-size: 90px;
+  line-height: 70px;
+  font-weight: bold;
+  color:#2e2c2c;
+}
+section .bloco1 p {
+  width: 50%;
+  margin-top: 18px;
+  font-family: "Qanelas-Regular", Helvetica;
+  text-align: justify;
+  font-size: 22px;
+}
+
+/* Configurações do CARDAPIO*/
+
+.main-projeto{
+  max-width: calc(1500px - 10px);
+  padding: 0 20px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+
+.main-projeto article{
+  opacity: 1;
+  flex-basis: calc(25% - 30px);
+  max-height: 620px;
+  
+  
+}
+
+.main-projeto article:hover{
+  opacity: 0.80;
+ 
+}
+
+.main-projeto article img{
+  width:900px;
+  max-width: 1007px;
+  height:580px;
+  max-height: 612px;
+  margin: 20px 0 20px 0;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.main-projeto article img:hover{
+  -webkit-filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5));
+  filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5));
+}
+/* Slideshow container2 */
+.slideshow-Container2 {
+  max-width:100%;
+  position: relative;
+  margin:auto;
+}
+
+/* Make the images invisible by default */
+.Containers2 {
+  display: none;
+  margin-top:10px;
+  
+}
+  /* Faint animation */
+.fade2 {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.4s;
+  animation-name: fade;
+  animation-duration: 1.4s;
+}
+
+@-webkit-keyframes fade2 {
+  from {opacity: .5}
+  to {opacity: 2}
+}
+
+@keyframes fade2 {
+  from {opacity: .5}
+  to {opacity: 2}
+}
+/*Definir estilo do rodape-formulario de contato*/
+
+footer{
+  width: 100%;
+  font-family: "Qanelas-Regular", Helvetica;
+  background-color: #24242c;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  
+}
+
+input::placeholder {
+  color: black;
+}
+/*Definir estilo dos botoes de rede social*/
+footer .social{
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  margin: 0 auto;
+
+
+}
+
+footer .social p{
+  font-family:"Qanelas-Regular", Helvetica;
+  font-size: 32px;
+  color:#FFF;
+  margin-left: 15px;
+}
+
+footer .s-m{
+  position: relative;
+  display: flex;
+  align-items: center;
+  
+  
+  }
+  footer .s-m a{
+  display: inline-flex;
+  width: 50px;
+  height: 50px;
+  background: #24242c;
+  color: #03c57d;
+  margin: 0 3px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s;
+  font-size: 23px;
+  text-decoration: none;
+}
+footer .s-m a:hover{
+  background: #fff;
+}
+footer .s-m a i{
+  transition: 0.5s all;
+}
+footer .s-m a:hover > i {
+  transform: scale(1.4) rotate(26deg);
+}  
+
+
+/*Definir tamanho da  barra no formulario de contato*/
+footer img{
+  margin:40px 10px 40px 10px;
+}
+
+footer .main-contato{
+  width: 40%;
+  margin: 0 auto;
+
+  
+}
+
+footer .main-contato section .container{
+  width:100%;
+  
+}
+}
